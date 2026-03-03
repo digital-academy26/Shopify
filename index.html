@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Transform your mindset with our premium digital ebook. Instant download, lifetime access.">
+  <title>Premium Mindset Ebook | Transform Your Life Today</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'luxury': {
+                            'black': '#0a0a0a',
+                            'charcoal': '#1a1a1a',
+                            'dark': '#2d2d2d',
+                            'gold': '#d4af37',
+                            'gold-light': '#f4e4bc',
+                            'cream': '#faf8f5',
+                            'white': '#ffffff',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'shimmer': 'shimmer 2s linear infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'scale-in': 'scaleIn 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+  <style>
+        html, body {
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 50%, #d4af37 100%);
+            background-size: 200% auto;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .glow-gold {
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.3), 0 0 80px rgba(212, 175, 55, 0.1);
+        }
+        
+        .glow-gold-subtle {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+        }
+        
+        .text-shadow {
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-premium {
+            background: linear-gradient(135deg, #d4af37 0%, #c9a227 100%);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .product-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+        
+        .testimonial-card {
+            transition: all 0.4s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+        }
+        
+        .star-rating {
+            color: #d4af37;
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hero-gradient {
+            background: radial-gradient(ellipse at top, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                        linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+        }
+        
+        .pattern-overlay {
+            background-image: radial-gradient(circle at 1px 1px, rgba(212, 175, 55, 0.03) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-luxury-black font-body text-white overflow-auto">
+  <div class="w-full min-h-full">
+   <!-- Floating WhatsApp Button --> <a href="https://wa.me/212780172071" target="_blank" rel="noopener noreferrer" class="floating-whatsapp flex items-center justify-center w-16 h-16 rounded-full btn-whatsapp shadow-2xl">
+    <svg class="w-8 h-8 text-white" fill="currentColor" viewbox="0 0 24 24">
+     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg></a> <!-- Hero Section -->
+   <section class="hero-gradient pattern-overlay relative min-h-screen flex items-center justify-center px-4 py-20">
+    <div class="absolute inset-0 overflow-hidden">
+     <div class="absolute top-20 left-10 w-72 h-72 bg-luxury-gold/5 rounded-full blur-3xl"></div>
+     <div class="absolute bottom-20 right-10 w-96 h-96 bg-luxury-gold/3 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto text-center">
+     <!-- Trust Badge -->
+     <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 animate-fade-in">
+      <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span> <span class="text-sm text-luxury-gold-light font-medium">Instant Digital Download</span>
+     </div><!-- Main Headline -->
+     <h1 id="hero-headline" class="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-up" style="animation-delay: 0.2s">Transform Your <span class="gradient-text">Mindset</span>,<br>
+       Transform Your <span class="gradient-text">Life</span></h1><!-- Subheadline -->
+     <p id="hero-subheadline" class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 animate-fade-in-up" style="animation-delay: 0.4s">Unlock the secrets to success, confidence, and unstoppable growth with our premium digital guide.</p><!-- Product Mockup -->
+     <div class="relative mb-12 animate-scale-in" style="animation-delay: 0.6s">
+      <div class="relative inline-block">
+       <div class="absolute -inset-4 bg-gradient-to-r from-luxury-gold/20 via-luxury-gold/10 to-luxury-gold/20 rounded-3xl blur-2xl"></div><img src="https://public-files.gumroad.com/pj68m5ntjj9ay8lfqfvdsllg7yj3" alt="Premium Mindset Ebook" class="relative w-64 md:w-80 h-auto rounded-2xl shadow-2xl glow-gold animate-float" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)'; this.alt='Premium Ebook';">
+      </div>
+     </div><!-- Price Badge -->
+     <div class="mb-8 animate-fade-in-up" style="animation-delay: 0.8s">
+      <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-card glow-gold-subtle">
+       <span class="text-gray-400 line-through text-lg">€24</span> <span id="price-display" class="text-3xl font-bold gradient-text">€7</span> <span class="px-3 py-1 bg-luxury-gold/20 rounded-full text-luxury-gold text-sm font-semibold">71% OFF</span>
+      </div>
+     </div><!-- CTA Buttons -->
+     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style="animation-delay: 1s">
+      <a href="https://salmane248.gumroad.com/l/jrvmz" target="_blank" rel="noopener noreferrer" class="btn-premium px-10 py-4 rounded-full text-luxury-black font-bold text-lg flex items-center gap-3 group"> <span id="cta-button">Get Instant Access</span>
+       <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+       </svg></a> <a href="https://wa.me/212780172071" target="_blank" rel="noopener noreferrer" class="btn-whatsapp px-8 py-4 rounded-full text-white font-semibold flex items-center gap-3">
+       <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+       </svg> Contact on WhatsApp </a>
+     </div><!-- Trust Indicators -->
+     <div class="flex flex-wrap justify-center gap-6 mt-12 animate-fade-in-up" style="animation-delay: 1.2s">
+      <div class="flex items-center gap-2 text-gray-400 text-sm">
+       <svg class="w-5 h-5 text-luxury-gold" fill="currentColor" viewbox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+       </svg> Instant Download
+      </div>
+      <div class="flex items-center gap-2 text-gray-400 text-sm">
+       <svg class="w-5 h-5 text-luxury-gold" fill="currentColor" viewbox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+       </svg> Secure Payment
+      </div>
+      <div class="flex items-center gap-2 text-gray-400 text-sm">
+       <svg class="w-5 h-5 text-luxury-gold" fill="currentColor" viewbox="0 0 20 20">
+        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+       </svg> 5-Star Rated
+      </div>
+      <div class="flex items-center gap-2 text-gray-400 text-sm">
+       <svg class="w-5 h-5 text-luxury-gold" fill="currentColor" viewbox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+       </svg> Lifetime Access
+      </div>
+     </div>
+    </div>
+   </section><!-- Section Divider -->
+   <div class="section-divider w-full"></div><!-- Social Proof Section -->
+   <section class="py-24 px-4 bg-luxury-charcoal relative">
+    <div class="absolute inset-0 pattern-overlay opacity-50"></div>
+    <div class="relative z-10 max-w-6xl mx-auto">
+     <div class="text-center mb-16 animate-on-scroll">
+      <span class="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-4 block">Testimonials</span>
+      <h2 class="font-display text-3xl md:text-5xl font-bold mb-4">What Our <span class="gradient-text">Readers</span> Say</h2>
+      <div class="flex justify-center gap-1 mb-4">
+       <span class="star-rating text-2xl">★★★★★</span>
+      </div>
+      <p class="text-gray-400">Trusted by hundreds of satisfied readers worldwide</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card glass-card-light rounded-2xl p-8 animate-on-scroll" style="animation-delay: 0.1s">
+       <div class="flex gap-1 mb-4 star-rating">
+        ★★★★★
+       </div>
+       <p class="text-luxury-charcoal mb-6 italic text-lg">"I absolutely love this ebook. It helped me so much in my personal growth journey. Highly recommended!"</p>
+       <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-luxury-gold to-luxury-gold-light flex items-center justify-center text-luxury-black font-bold text-lg">
+         S
+        </div>
+        <div>
+         <p class="font-semibold text-luxury-charcoal">Sara L.</p>
+         <p class="text-sm text-gray-500">Verified Buyer</p>
+        </div>
+       </div>
+      </div><!-- Testimonial 2 -->
+      <div class="testimonial-card glass-card-light rounded-2xl p-8 animate-on-scroll" style="animation-delay: 0.2s">
+       <div class="flex gap-1 mb-4 star-rating">
+        ★★★★★
+       </div>
+       <p class="text-luxury-charcoal mb-6 italic text-lg">"Very professional and easy to follow. The content is clear, actionable, and truly life-changing."</p>
+       <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-luxury-gold to-luxury-gold-light flex items-center justify-center text-luxury-black font-bold text-lg">
+         L
+        </div>
+        <div>
+         <p class="font-semibold text-luxury-charcoal">Lina M.</p>
+         <p class="text-sm text-gray-500">Verified Buyer</p>
+        </div>
+       </div>
+      </div><!-- Testimonial 3 -->
+      <div class="testimonial-card glass-card-light rounded-2xl p-8 animate-on-scroll" style="animation-delay: 0.3s">
+       <div class="flex gap-1 mb-4 star-rating">
+        ★★★★★
+       </div>
+       <p class="text-luxury-charcoal mb-6 italic text-lg">"This is one of the best investments I made. Worth every penny and more. Thank you!"</p>
+       <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-luxury-gold to-luxury-gold-light flex items-center justify-center text-luxury-black font-bold text-lg">
+         A
+        </div>
+        <div>
+         <p class="font-semibold text-luxury-charcoal">Amal R.</p>
+         <p class="text-sm text-gray-500">Verified Buyer</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section Divider -->
+   <div class="section-divider w-full"></div><!-- Product Benefits Section -->
+   <section class="py-24 px-4 bg-luxury-black relative">
+    <div class="absolute inset-0 overflow-hidden">
+     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-luxury-gold/5 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto">
+     <div class="text-center mb-16 animate-on-scroll">
+      <span class="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-4 block">Benefits</span>
+      <h2 class="font-display text-3xl md:text-5xl font-bold mb-4">Why You'll <span class="gradient-text">Love</span> This</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Discover the transformative power hidden within these pages</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Benefit 1 -->
+      <div class="glass-card rounded-2xl p-8 text-center animate-on-scroll hover:glow-gold-subtle transition-all duration-300" style="animation-delay: 0.1s">
+       <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-luxury-gold/20 to-luxury-gold/5 flex items-center justify-center">
+        <svg class="w-8 h-8 text-luxury-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+       </div>
+       <h3 class="font-display text-xl font-bold mb-3">Instant Transformation</h3>
+       <p class="text-gray-400">Begin your journey to a new mindset the moment you start reading.</p>
+      </div><!-- Benefit 2 -->
+      <div class="glass-card rounded-2xl p-8 text-center animate-on-scroll hover:glow-gold-subtle transition-all duration-300" style="animation-delay: 0.2s">
+       <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-luxury-gold/20 to-luxury-gold/5 flex items-center justify-center">
+        <svg class="w-8 h-8 text-luxury-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+       </div>
+       <h3 class="font-display text-xl font-bold mb-3">Proven Strategies</h3>
+       <p class="text-gray-400">Expert-crafted techniques backed by real success stories.</p>
+      </div><!-- Benefit 3 -->
+      <div class="glass-card rounded-2xl p-8 text-center animate-on-scroll hover:glow-gold-subtle transition-all duration-300" style="animation-delay: 0.3s">
+       <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-luxury-gold/20 to-luxury-gold/5 flex items-center justify-center">
+        <svg class="w-8 h-8 text-luxury-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 class="font-display text-xl font-bold mb-3">Lifetime Access</h3>
+       <p class="text-gray-400">Your guide forever. Revisit anytime, anywhere, on any device.</p>
+      </div><!-- Benefit 4 -->
+      <div class="glass-card rounded-2xl p-8 text-center animate-on-scroll hover:glow-gold-subtle transition-all duration-300" style="animation-delay: 0.4s">
+       <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-luxury-gold/20 to-luxury-gold/5 flex items-center justify-center">
+        <svg class="w-8 h-8 text-luxury-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+       </div>
+       <h3 class="font-display text-xl font-bold mb-3">Self-Love &amp; Confidence</h3>
+       <p class="text-gray-400">Build unshakeable self-belief and radiate confidence.</p>
+      </div><!-- Benefit 5 -->
+      <div class="glass-card rounded-2xl p-8 text-center animate-on-scroll hover:glow-gold-subtle transition-all duration-300" style="animation-delay: 0.5s">
+       <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-luxury-gold/20 to-luxury-gold/5 flex items-center justify-center">
+        <svg class="w-8 h-8 text-luxury-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+       </div>
+       <h3 class="font-display text-xl font-bold mb-3">Success Blueprint</h3>
+       <p class="text-gray-400">A clear roadmap to achieve your goals and dreams.</p>
+      </div><!-- Benefit 6 -->
+      <div class="glass-card rounded-2xl p-8 text-center animate-on-scroll hover:glow-gold-subtle transition-all duration-300" style="animation-delay: 0.6s">
+       <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-luxury-gold/20 to-luxury-gold/5 flex items-center justify-center">
+        <svg class="w-8 h-8 text-luxury-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+       </div>
+       <h3 class="font-display text-xl font-bold mb-3">Easy to Follow</h3>
+       <p class="text-gray-400">Beginner-friendly content anyone can understand and apply.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section Divider -->
+   <div class="section-divider w-full"></div><!-- Product Preview Section -->
+   <section class="py-24 px-4 bg-luxury-charcoal relative">
+    <div class="absolute inset-0 pattern-overlay opacity-30"></div>
+    <div class="relative z-10 max-w-6xl mx-auto">
+     <div class="text-center mb-16 animate-on-scroll">
+      <span class="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-4 block">Preview</span>
+      <h2 class="font-display text-3xl md:text-5xl font-bold mb-4">A Glimpse <span class="gradient-text">Inside</span></h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Take a look at the premium quality content waiting for you</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-8">
+      <!-- Preview 1 -->
+      <div class="product-card relative group animate-on-scroll" style="animation-delay: 0.1s">
+       <div class="absolute -inset-2 bg-gradient-to-r from-luxury-gold/20 to-luxury-gold/0 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+       <div class="relative overflow-hidden rounded-2xl">
+        <img src="https://public-files.gumroad.com/pj68m5ntjj9ay8lfqfvdsllg7yj3" alt="Ebook Preview 1" class="w-full h-auto" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)'; this.style.minHeight='300px'; this.alt='Preview Image';">
+        <div class="absolute inset-0 bg-gradient-to-t from-luxury-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+         <span class="text-white font-semibold">Premium Cover Design</span>
+        </div>
+       </div>
+      </div><!-- Preview 2 -->
+      <div class="product-card relative group animate-on-scroll" style="animation-delay: 0.2s">
+       <div class="absolute -inset-2 bg-gradient-to-r from-luxury-gold/20 to-luxury-gold/0 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+       <div class="relative overflow-hidden rounded-2xl">
+        <img src="https://public-files.gumroad.com/5fcm81sd7qh0dwu0b5hal1y0bwla" alt="Ebook Preview 2" class="w-full h-auto" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)'; this.style.minHeight='300px'; this.alt='Preview Image';">
+        <div class="absolute inset-0 bg-gradient-to-t from-luxury-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+         <span class="text-white font-semibold">Beautifully Crafted Pages</span>
+        </div>
+       </div>
+      </div><!-- Preview 3 -->
+      <div class="product-card relative group animate-on-scroll" style="animation-delay: 0.3s">
+       <div class="absolute -inset-2 bg-gradient-to-r from-luxury-gold/20 to-luxury-gold/0 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+       <div class="relative overflow-hidden rounded-2xl">
+        <img src="https://public-files.gumroad.com/t443pluv2sfgryd35qfa505lm9cl" alt="Ebook Preview 3" class="w-full h-auto" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)'; this.style.minHeight='300px'; this.alt='Preview Image';">
+        <div class="absolute inset-0 bg-gradient-to-t from-luxury-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+         <span class="text-white font-semibold">Rich Content Layout</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section Divider -->
+   <div class="section-divider w-full"></div><!-- What You Get Section -->
+   <section class="py-24 px-4 bg-luxury-black relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-luxury-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+    <div class="relative z-10 max-w-4xl mx-auto">
+     <div class="text-center mb-16 animate-on-scroll">
+      <span class="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-4 block">Package</span>
+      <h2 class="font-display text-3xl md:text-5xl font-bold mb-4">What You'll <span class="gradient-text">Receive</span></h2>
+     </div>
+     <div class="glass-card rounded-3xl p-8 md:p-12 animate-on-scroll">
+      <div class="space-y-6">
+       <div class="flex items-start gap-4 p-4 rounded-xl bg-luxury-gold/5 hover:bg-luxury-gold/10 transition-colors">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-luxury-gold/20 flex items-center justify-center">
+         <svg class="w-5 h-5 text-luxury-gold" fill="currentColor" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg mb-1">Complete Digital Ebook</h4>
+         <p class="text-gray-400">Full premium content in easy-to-read digital format</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4 p-4 rounded-xl bg-luxury-gold/5 hover:bg-luxury-gold/10 transition-colors">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-luxury-gold/20 flex items-center justify-center">
+         <svg class="w-5 h-5 text-luxury-gold" fill="currentColor" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg mb-1">Instant Download Access</h4>
+         <p class="text-gray-400">Start reading immediately after purchase - no waiting</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4 p-4 rounded-xl bg-luxury-gold/5 hover:bg-luxury-gold/10 transition-colors">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-luxury-gold/20 flex items-center justify-center">
+         <svg class="w-5 h-5 text-luxury-gold" fill="currentColor" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg mb-1">Lifetime Access</h4>
+         <p class="text-gray-400">Yours forever - reread and reference anytime</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4 p-4 rounded-xl bg-luxury-gold/5 hover:bg-luxury-gold/10 transition-colors">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-luxury-gold/20 flex items-center justify-center">
+         <svg class="w-5 h-5 text-luxury-gold" fill="currentColor" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg mb-1">Beginner-Friendly Content</h4>
+         <p class="text-gray-400">Easy to understand, actionable steps for everyone</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4 p-4 rounded-xl bg-luxury-gold/5 hover:bg-luxury-gold/10 transition-colors">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-luxury-gold/20 flex items-center justify-center">
+         <svg class="w-5 h-5 text-luxury-gold" fill="currentColor" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg>
+        </div>
+        <div>
+         <h4 class="font-semibold text-lg mb-1">High-Value Strategies</h4>
+         <p class="text-gray-400">Proven techniques used by successful individuals</p>
+        </div>
+       </div>
+      </div><!-- Price CTA -->
+      <div class="mt-10 pt-8 border-t border-luxury-gold/20 text-center">
+       <div class="mb-6">
+        <span class="text-gray-400 line-through text-xl">$99</span> <span class="text-4xl font-bold gradient-text ml-3">$29</span>
+       </div><a href="https://salmane248.gumroad.com/l/jrvmz" target="_blank" rel="noopener noreferrer" class="inline-flex btn-premium px-10 py-4 rounded-full text-luxury-black font-bold text-lg items-center gap-3 group"> Get Your Copy Now 
+        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg></a>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section Divider -->
+   <div class="section-divider w-full"></div><!-- Transformation Section -->
+   <section class="py-24 px-4 bg-luxury-charcoal relative">
+    <div class="absolute inset-0 pattern-overlay opacity-30"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+     <div class="text-center mb-16 animate-on-scroll">
+      <span class="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-4 block">Your Journey</span>
+      <h2 class="font-display text-3xl md:text-5xl font-bold mb-4">Your <span class="gradient-text">Transformation</span> Awaits</h2>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+      <!-- Before -->
+      <div class="glass-card rounded-3xl p-8 animate-on-scroll border-l-4 border-red-500/50">
+       <div class="flex items-center gap-3 mb-6">
+        <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center">
+         <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+         </svg>
+        </div>
+        <h3 class="font-display text-2xl font-bold text-red-400">Before</h3>
+       </div>
+       <ul class="space-y-4">
+        <li class="flex items-start gap-3"><span class="text-red-400 mt-1">✗</span> <span class="text-gray-300">Feeling stuck and uncertain about your future</span></li>
+        <li class="flex items-start gap-3"><span class="text-red-400 mt-1">✗</span> <span class="text-gray-300">Lacking confidence in your abilities</span></li>
+        <li class="flex items-start gap-3"><span class="text-red-400 mt-1">✗</span> <span class="text-gray-300">Overwhelmed by negative thoughts</span></li>
+        <li class="flex items-start gap-3"><span class="text-red-400 mt-1">✗</span> <span class="text-gray-300">Missing opportunities due to self-doubt</span></li>
+        <li class="flex items-start gap-3"><span class="text-red-400 mt-1">✗</span> <span class="text-gray-300">No clear direction for growth</span></li>
+       </ul>
+      </div><!-- After -->
+      <div class="glass-card rounded-3xl p-8 animate-on-scroll border-l-4 border-luxury-gold glow-gold-subtle" style="animation-delay: 0.2s">
+       <div class="flex items-center gap-3 mb-6">
+        <div class="w-12 h-12 rounded-full bg-luxury-gold/20 flex items-center justify-center">
+         <svg class="w-6 h-6 text-luxury-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+         </svg>
+        </div>
+        <h3 class="font-display text-2xl font-bold gradient-text">After</h3>
+       </div>
+       <ul class="space-y-4">
+        <li class="flex items-start gap-3"><span class="text-luxury-gold mt-1">✓</span> <span class="text-gray-300">Crystal clear vision for your future</span></li>
+        <li class="flex items-start gap-3"><span class="text-luxury-gold mt-1">✓</span> <span class="text-gray-300">Unshakeable confidence and self-belief</span></li>
+        <li class="flex items-start gap-3"><span class="text-luxury-gold mt-1">✓</span> <span class="text-gray-300">Positive mindset that attracts success</span></li>
+        <li class="flex items-start gap-3"><span class="text-luxury-gold mt-1">✓</span> <span class="text-gray-300">Taking action on your dreams fearlessly</span></li>
+        <li class="flex items-start gap-3"><span class="text-luxury-gold mt-1">✓</span> <span class="text-gray-300">A proven roadmap to achieve your goals</span></li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section Divider -->
+   <div class="section-divider w-full"></div><!-- WhatsApp Contact Section -->
+   <section class="py-24 px-4 bg-luxury-black relative">
+    <div class="absolute inset-0 overflow-hidden">
+     <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-green-500/5 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto text-center">
+     <div class="animate-on-scroll">
+      <div class="w-20 h-20 mx-auto mb-8 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center glow-gold-subtle animate-pulse-slow">
+       <svg class="w-10 h-10 text-white" fill="currentColor" viewbox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+       </svg>
+      </div>
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Have <span class="gradient-text">Questions?</span></h2>
+      <p class="text-gray-400 text-lg mb-8 max-w-xl mx-auto">We're here to help! Contact us instantly on WhatsApp and get your questions answered.</p><a href="https://wa.me/212780172071" target="_blank" rel="noopener noreferrer" class="inline-flex btn-whatsapp px-10 py-4 rounded-full text-white font-bold text-lg items-center gap-3">
+       <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+       </svg> Chat on WhatsApp </a>
+     </div>
+    </div>
+   </section><!-- Section Divider -->
+   <div class="section-divider w-full"></div><!-- Social Media Section -->
+   <section class="py-24 px-4 bg-luxury-charcoal relative">
+    <div class="absolute inset-0 pattern-overlay opacity-30"></div>
+    <div class="relative z-10 max-w-4xl mx-auto text-center">
+     <div class="animate-on-scroll">
+      <span class="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-4 block">Connect</span>
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Follow Us on <span class="gradient-text">Social Media</span></h2>
+      <p class="text-gray-400 text-lg mb-12 max-w-xl mx-auto">Stay connected for daily inspiration, tips, and exclusive content</p>
+     </div>
+     <div class="flex flex-wrap justify-center gap-6">
+      <!-- Instagram --> <a href="https://www.instagram.com/trasten_mindset" target="_blank" rel="noopener noreferrer" class="social-btn glass-card rounded-2xl p-6 w-40 flex flex-col items-center gap-4 hover:glow-gold-subtle animate-on-scroll" style="animation-delay: 0.1s">
+       <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 flex items-center justify-center">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewbox="0 0 24 24">
+         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg>
+       </div><span class="font-semibold text-white">Instagram</span> </a> <!-- Facebook --> <a href="https://www.facebook.com/share/1DaShn7FWo" target="_blank" rel="noopener noreferrer" class="social-btn glass-card rounded-2xl p-6 w-40 flex flex-col items-center gap-4 hover:glow-gold-subtle animate-on-scroll" style="animation-delay: 0.2s">
+       <div class="w-14 h-14 rounded-xl bg-[#1877F2] flex items-center justify-center">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewbox="0 0 24 24">
+         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg>
+       </div><span class="font-semibold text-white">Facebook</span> </a> <!-- TikTok --> <a href="https://www.tiktok.com/@tutorial_salmane" target="_blank" rel="noopener noreferrer" class="social-btn glass-card rounded-2xl p-6 w-40 flex flex-col items-center gap-4 hover:glow-gold-subtle animate-on-scroll" style="animation-delay: 0.3s">
+       <div class="w-14 h-14 rounded-xl bg-black flex items-center justify-center border border-gray-700">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewbox="0 0 24 24">
+         <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
+        </svg>
+       </div><span class="font-semibold text-white">TikTok</span> </a>
+     </div>
+    </div>
+   </section><!-- Section Divider -->
+   <div class="section-divider w-full"></div><!-- Final CTA Section -->
+   <section class="py-24 px-4 bg-luxury-black relative overflow-hidden">
+    <div class="absolute inset-0">
+     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-luxury-gold/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto text-center">
+     <div class="animate-on-scroll">
+      <span class="inline-block px-4 py-2 rounded-full bg-luxury-gold/10 text-luxury-gold text-sm font-semibold mb-8">Limited Time Offer</span>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">Ready to <span class="gradient-text">Transform</span><br>
+        Your Life?</h2>
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Don't let another day pass without taking action. Your new mindset is just one click away.</p><!-- Price -->
+      <div class="mb-10">
+       <div class="inline-flex items-center gap-4 px-8 py-4 rounded-2xl glass-card glow-gold">
+        <div class="text-left">
+         <span class="block text-gray-400 text-sm line-through">Regular Price: €24</span> <span class="block text-3xl font-bold gradient-text">Today Only: €7</span>
+        </div>
+        <div class="px-4 py-2 bg-red-500/20 rounded-lg">
+         <span class="text-red-400 font-bold">SAVE 71%</span>
+        </div>
+       </div>
+      </div><!-- CTA Button --> <a href="https://salmane248.gumroad.com/l/jrvmz" target="_blank" rel="noopener noreferrer" class="inline-flex btn-premium px-12 py-5 rounded-full text-luxury-black font-bold text-xl items-center gap-4 group mb-8"> <span>Get Instant Access Now</span>
+       <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+       </svg></a> <!-- Guarantees -->
+      <div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm">
+       <span class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewbox="0 0 20 20">
+         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg> Instant Download </span> <span class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewbox="0 0 20 20">
+         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg> Secure Payment </span> <span class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewbox="0 0 20 20">
+         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg> Lifetime Access </span>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section Divider -->
+   <div class="section-divider w-full"></div><!-- FAQ Section -->
+   <section class="py-24 px-4 bg-luxury-charcoal relative">
+    <div class="absolute inset-0 pattern-overlay opacity-30"></div>
+    <div class="relative z-10 max-w-3xl mx-auto">
+     <div class="text-center mb-16 animate-on-scroll">
+      <span class="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-4 block">FAQ</span>
+      <h2 class="font-display text-3xl md:text-5xl font-bold mb-4">Common <span class="gradient-text">Questions</span></h2>
+     </div>
+     <div class="space-y-4" id="faq-container">
+      <!-- FAQ 1 -->
+      <div class="glass-card rounded-2xl overflow-hidden animate-on-scroll faq-item" style="animation-delay: 0.1s">
+       <button class="w-full px-6 py-5 flex items-center justify-between text-left faq-toggle" onclick="toggleFaq(this)"> <span class="font-semibold text-lg">How do I access my ebook after purchase?</span>
+        <svg class="w-5 h-5 text-luxury-gold transform transition-transform faq-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg></button>
+       <div class="px-6 pb-5 hidden faq-content">
+        <p class="text-gray-400">After completing your purchase, you'll receive an instant download link. You can access your ebook immediately on any device - phone, tablet, or computer.</p>
+       </div>
+      </div><!-- FAQ 2 -->
+      <div class="glass-card rounded-2xl overflow-hidden animate-on-scroll faq-item" style="animation-delay: 0.2s">
+       <button class="w-full px-6 py-5 flex items-center justify-between text-left faq-toggle" onclick="toggleFaq(this)"> <span class="font-semibold text-lg">Is this ebook suitable for beginners?</span>
+        <svg class="w-5 h-5 text-luxury-gold transform transition-transform faq-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg></button>
+       <div class="px-6 pb-5 hidden faq-content">
+        <p class="text-gray-400">Absolutely! This ebook is designed to be beginner-friendly with easy-to-follow steps and actionable advice that anyone can implement.</p>
+       </div>
+      </div><!-- FAQ 3 -->
+      <div class="glass-card rounded-2xl overflow-hidden animate-on-scroll faq-item" style="animation-delay: 0.3s">
+       <button class="w-full px-6 py-5 flex items-center justify-between text-left faq-toggle" onclick="toggleFaq(this)"> <span class="font-semibold text-lg">What format is the ebook in?</span>
+        <svg class="w-5 h-5 text-luxury-gold transform transition-transform faq-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg></button>
+       <div class="px-6 pb-5 hidden faq-content">
+        <p class="text-gray-400">The ebook is delivered in PDF format, which is compatible with all devices and can be read on any PDF reader app.</p>
+       </div>
+      </div><!-- FAQ 4 -->
+      <div class="glass-card rounded-2xl overflow-hidden animate-on-scroll faq-item" style="animation-delay: 0.4s">
+       <button class="w-full px-6 py-5 flex items-center justify-between text-left faq-toggle" onclick="toggleFaq(this)"> <span class="font-semibold text-lg">Is my payment secure?</span>
+        <svg class="w-5 h-5 text-luxury-gold transform transition-transform faq-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg></button>
+       <div class="px-6 pb-5 hidden faq-content">
+        <p class="text-gray-400">Yes! All payments are processed securely through Gumroad, a trusted platform used by millions. Your payment information is fully encrypted.</p>
+       </div>
+      </div><!-- FAQ 5 -->
+      <div class="glass-card rounded-2xl overflow-hidden animate-on-scroll faq-item" style="animation-delay: 0.5s">
+       <button class="w-full px-6 py-5 flex items-center justify-between text-left faq-toggle" onclick="toggleFaq(this)"> <span class="font-semibold text-lg">Can I ask questions after purchasing?</span>
+        <svg class="w-5 h-5 text-luxury-gold transform transition-transform faq-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg></button>
+       <div class="px-6 pb-5 hidden faq-content">
+        <p class="text-gray-400">Of course! You can reach out anytime via WhatsApp. We're here to support you on your transformation journey.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="py-16 px-4 bg-luxury-black border-t border-luxury-gold/10">
+    <div class="max-w-6xl mx-auto">
+     <div class="grid md:grid-cols-3 gap-12 mb-12">
+      <!-- Brand -->
+      <div>
+       <h3 class="font-display text-2xl font-bold gradient-text mb-4">Trasten Mindset</h3>
+       <p class="text-gray-400 mb-6">Empowering you to transform your mindset and achieve greatness.</p>
+       <div class="flex gap-4">
+        <a href="https://www.instagram.com/trasten_mindset" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-luxury-gold/20 transition-colors">
+         <svg class="w-5 h-5 text-luxury-gold" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+         </svg></a> <a href="https://www.facebook.com/share/1DaShn7FWo" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-luxury-gold/20 transition-colors">
+         <svg class="w-5 h-5 text-luxury-gold" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+         </svg></a> <a href="https://www.tiktok.com/@tutorial_salmane" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-luxury-gold/20 transition-colors">
+         <svg class="w-5 h-5 text-luxury-gold" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
+         </svg></a>
+       </div>
+      </div><!-- Quick Links -->
+      <div>
+       <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+       <ul class="space-y-3">
+        <li><a href="https://salmane248.gumroad.com/l/jrvmz" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-gold transition-colors">Get the Ebook</a></li>
+        <li><a href="https://wa.me/212780172071" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-luxury-gold transition-colors">Contact Us</a></li>
+       </ul>
+      </div><!-- Contact -->
+      <div>
+       <h4 class="font-semibold text-white mb-4">Get in Touch</h4><a href="https://wa.me/212780172071" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-gray-400 hover:text-luxury-gold transition-colors">
+        <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg> Chat on WhatsApp </a>
+      </div>
+     </div><!-- Bottom -->
+     <div class="pt-8 border-t border-luxury-gold/10 text-center">
+      <p class="text-gray-500 text-sm">© 2024 Trasten Mindset. All rights reserved.</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+        // Default config for editable content
+        const defaultConfig = {
+            hero_headline: 'Transform Your <span class="gradient-text">Mindset</span>,<br>Transform Your <span class="gradient-text">Life</span>',
+            hero_subheadline: 'Unlock the secrets to success, confidence, and unstoppable growth with our premium digital guide.',
+            cta_button_text: 'Get Instant Access',
+            price_text: '€7',
+            background_color: '#0a0a0a',
+            surface_color: '#1a1a1a',
+            text_color: '#ffffff',
+            primary_action_color: '#d4af37',
+            secondary_action_color: '#25D366'
+        };
+        
+        // Initialize Element SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange: async (config) => {
+                    // Update headline
+                    const headline = document.getElementById('hero-headline');
+                    if (headline) headline.innerHTML = config.hero_headline || defaultConfig.hero_headline;
+                    
+                    // Update subheadline
+                    const subheadline = document.getElementById('hero-subheadline');
+                    if (subheadline) subheadline.textContent = config.hero_subheadline || defaultConfig.hero_subheadline;
+                    
+                    // Update CTA button
+                    const ctaButton = document.getElementById('cta-button');
+                    if (ctaButton) ctaButton.textContent = config.cta_button_text || defaultConfig.cta_button_text;
+                    
+                    // Update price display
+                    const priceDisplay = document.getElementById('price-display');
+                    if (priceDisplay) priceDisplay.textContent = config.price_text || defaultConfig.price_text;
+                    
+                    // Update colors
+                    document.documentElement.style.setProperty('--bg-color', config.background_color || defaultConfig.background_color);
+                    document.documentElement.style.setProperty('--surface-color', config.surface_color || defaultConfig.surface_color);
+                    document.documentElement.style.setProperty('--text-color', config.text_color || defaultConfig.text_color);
+                    document.documentElement.style.setProperty('--primary-color', config.primary_action_color || defaultConfig.primary_action_color);
+                    document.documentElement.style.setProperty('--secondary-color', config.secondary_action_color || defaultConfig.secondary_action_color);
+                },
+                mapToCapabilities: (config) => ({
+                    recolorables: [
+                        {
+                            get: () => config.background_color || defaultConfig.background_color,
+                            set: (value) => {
+                                config.background_color = value;
+                                window.elementSdk.setConfig({ background_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.surface_color || defaultConfig.surface_color,
+                            set: (value) => {
+                                config.surface_color = value;
+                                window.elementSdk.setConfig({ surface_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.text_color || defaultConfig.text_color,
+                            set: (value) => {
+                                config.text_color = value;
+                                window.elementSdk.setConfig({ text_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+                            set: (value) => {
+                                config.primary_action_color = value;
+                                window.elementSdk.setConfig({ primary_action_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+                            set: (value) => {
+                                config.secondary_action_color = value;
+                                window.elementSdk.setConfig({ secondary_action_color: value });
+                            }
+                        }
+                    ],
+                    borderables: [],
+                    fontEditable: undefined,
+                    fontSizeable: undefined
+                }),
+                mapToEditPanelValues: (config) => new Map([
+                    ['hero_headline', config.hero_headline || defaultConfig.hero_headline],
+                    ['hero_subheadline', config.hero_subheadline || defaultConfig.hero_subheadline],
+                    ['cta_button_text', config.cta_button_text || defaultConfig.cta_button_text],
+                    ['price_text', config.price_text || defaultConfig.price_text]
+                ])
+            });
+        }
+        
+        // FAQ Toggle functionality
+        function toggleFaq(button) {
+            const faqItem = button.closest('.faq-item');
+            const content = faqItem.querySelector('.faq-content');
+            const icon = faqItem.querySelector('.faq-icon');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.querySelector('.faq-content').classList.add('hidden');
+                    item.querySelector('.faq-icon').classList.remove('rotate-180');
+                }
+            });
+            
+            // Toggle current FAQ
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d630331a7d8d92d',t:'MTc3MjQ4MTg4Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
